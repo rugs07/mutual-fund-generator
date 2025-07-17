@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@layer base {
+  @font-face {
+    font-family: "FiraCode";
+    src: url("/fonts/FiraCode-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "BebasNeue";
+    src: url("/fonts/BebasNeueBold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "BebasNeue";
+    src: url("/fonts/BebasNeueRegular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-Medium.ttf");
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: "Nexa";
+    src: url("/fonts/Nexa-Light.ttf");
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: "Nexa";
+    src: url("/fonts/Nexa-Book.ttf");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Nexa";
+    src: url("/fonts/Nexa-Bold.ttf");
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: "Nexa";
+    src: url("/fonts/Nexa-Heavy.ttf");
+    font-weight: 800;
+  }
+  @font-face {
+    font-family: "Nexa";
+    src: url("/fonts/Nexa-Black.ttf");
+    font-weight: 900;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #f7f6f9;
+    font-family: "Nexa";
+  }
+
+  input,
+  input:focus,
+  input:focus-visible {
+    @apply ring-0 shadow-none outline-none;
+  }
+  input[type="number"]:hover {
+    @apply appearance-none;
+  }
+
+  .no-scroll-bar::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers (Chrome, Safari) */
+  }
+  /* scroll bar */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #dac9ff;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .service-list-btn-cont::-webkit-scrollbar-thumb {
+    background-color: #a182f3;
+    height: 10px;
+  }
+  .service-list-btn-cont::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(161, 130, 243, 0.5);
+  }
+}
+
+@theme {
+  --text-8: 8px;
+  --text-10: 10px;
+  --text-12: 12px;
+  --text-14: 14px;
+  --text-15: 15px;
+  --text-16: 16px;
+  --text-18: 18px;
+  --text-20: 20px;
+  --text-22: 22px;
+  --text-25: 25px;
+  --text-28: 28px;
+  --text-30: 30px;
+  --text-32: 32px;
+  --text-35: 35px;
+  --text-40: 40px;
+  --text-50: 50px;
+  --text-55: 55px;
+  --text-60: 60px;
+}
+
+@theme {
+  --font-sans: "Inter", "ui-sans-serif", "system-ui";
+  --font-serif: "Georgia", "ui-serif", "serif";
+  --font-mono: "SFMono-Regular", "Menlo", "monospace";
+  --font-bebas: "BebasNeue", "sans-serif";
+  --font-firacode: "FiraCode", "monospace";
+  --font-montserrat: "Montserrat", "sans-serif";
+}
+
+@theme {
+  --color-yellow-100: #fef4db;
+  --color-yellow-200: #fbdb86;
+
+  --color-purple-100: #f2edff;
+  --color-purple-200: #a182f3;
+  --color-purple-300: #d3c2ff;
+  --color-purple-400: ;
+
+  --color-skyblue-100: #dffbff;
+  --color-skyblue-200: #93f2ff;
+
+  --color-pink-100: #f5eaeb;
+  --color-pink-200: #dcb7bc;
+
+  --color-green-100: #00a962;
+
+  --color-red-100: #cb3c4f;
+
+  --color-text-50: #aeaeae;
+  --color-text-100: #cecece;
+  --color-text-200: #969696;
+  --color-text-300: #5a5a5a;
+
+  --color-gray-100: #929292;
+  --color-gray-200: #eeeeee;
+  --color-gray-300: #333333;
+  --color-gray-400: #727a90;
+}
+
+@theme {
+  --breakpoint-: 450px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1400px;
+  --breakpoint-3xl: 1920px;
+}
+
+@theme {
+  --shadow-: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-DEFAULT: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  --shadow-purple-shadow: 0px 1px 9px 2px #a182f37d;
+  --shadow-special: 3px -3px 0 black;
+  --shadow-special-yellow: 3px -3px 0 #fbdb86;
+  --shadow-special-yellow1: -4px -4px 0 #fbdb86;
+  --shadow-special-purple: 3px -3px 0 #d3c2ff;
+  --shadow-special-blue: 3px -3px 0 #d3c2ff;
+  --shadow-special-cyan: 3px -3px 0 #93f2ff;
+  --shadow-special-red: 3px -3px 0 #cb3c4f;
+  --shadow-special-pink: 3px -3px 0 #dcb7bc;
+  --shadow-blue-glow: 0px 1px 9px 2px #6bd2e07d;
+}
